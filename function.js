@@ -41,14 +41,14 @@ const formSummit = Vue.createApp({
       if (this.store.input != "") {
         this.store.failBorder = false;
         if ($.inArray(this.store.input, storelist) == -1) {
-          this.store.errorMsg = "no result 查無此店";
+          this.store.errorMsg = "查無此店";
           this.store.failBorder = true;
         } else {
           this.store.errorMsg = "";
           this.store.failBorder = false;
         }
       } else {
-        this.store.errorMsg = "required";
+        this.store.errorMsg = "必填";
         this.store.failBorder = true;
       }
 
@@ -57,14 +57,14 @@ const formSummit = Vue.createApp({
         this.name.failBorder = false;
         const name_regularExp = /[\a-\z\A-\Z\u4E00-\u9FA5]/;
         if (!name_regularExp.test(this.name.input)) {
-          this.name.errorMsg = "wrong format 請填入中文或英文";
+          this.name.errorMsg = "請填入中文或英文";
           this.name.failBorder = true;
         } else {
           this.name.errorMsg = "";
           this.name.failBorder = false;
         }
       } else {
-        this.name.errorMsg = "required";
+        this.name.errorMsg = "必填";
         this.name.failBorder = true;
       }
 
@@ -73,14 +73,14 @@ const formSummit = Vue.createApp({
         const phone_regularExp = /09[0-9]{8}$/;
         this.phone.failBorder = false;
         if (!phone_regularExp.test(this.phone.input)) {
-          this.phone.errorMsg = "wrong format 請填入正確電話格式";
+          this.phone.errorMsg = "請填入正確電話格式";
           this.phone.failBorder = true;
         } else {
           this.phone.errorMsg = "";
           this.phone.failBorder = false;
         }
       } else {
-        this.phone.errorMsg = "required";
+        this.phone.errorMsg = "必填";
         this.phone.failBorder = true;
       }
 
@@ -94,11 +94,11 @@ const formSummit = Vue.createApp({
         this.consumption.errorMsg = "";
         this.consumption.failBorder = false;
       } else {
-        this.consumption.errorMsg = "wrong format 請填入數字且不可小於0";
+        this.consumption.errorMsg = "請填入數字且不可小於0";
         this.consumption.failBorder = true;
       }
         } else {
-        this.consumption.errorMsg = "required";
+        this.consumption.errorMsg = "必填";
         this.consumption.failBorder = true;
       }
 
@@ -107,7 +107,7 @@ const formSummit = Vue.createApp({
         this.payment.failBorder = false;
         this.payment.errorMsg = "";
       } else {
-        this.payment.errorMsg = "required";
+        this.payment.errorMsg = "必填";
         this.payment.failBorder = true;
       }
 

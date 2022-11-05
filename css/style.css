@@ -16,7 +16,7 @@ body * {
 }
 .formWrap .myform {
   padding: 40px 20px 20px 20px;
-  background-color: rgba(255, 255, 255, 0.499);
+  background-color: rgba(255, 255, 255, 0.544);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 16px;
