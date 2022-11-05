@@ -1,0 +1,126 @@
+body .background {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+body * {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.formWrap {
+  padding: 120px 24px 0;
+  width: 100%;
+  max-width: 808px;
+  margin: auto;
+}
+.formWrap .myform {
+  padding: 40px 20px 20px 20px;
+  background-color: rgba(255, 255, 255, 0.499);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0px 12px 18px rgba(73, 72, 72, 0.631);
+}
+.formWrap .myform .formTitle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #0059b1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 10px rgba(73, 72, 72, 0.25);
+}
+.formWrap .myform .formTitle::after {
+  content: "";
+  position: absolute;
+  width: 64px;
+  top: -10px;
+  right: -44px;
+  aspect-ratio: 64/62;
+}
+.formWrap .myform .formTitle span {
+  color: #0059b1;
+  font-weight: 700;
+  line-height: 125%;
+  font-size: 18px;
+  letter-spacing: 0.2rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.formWrap .myform .form-control {
+  border: 1px solid #204379;
+  padding: 17.5px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.formWrap .myform .form-control::-moz-placeholder {
+  color: #bdbdbd;
+}
+.formWrap .myform .form-control:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+.formWrap .myform .form-control::placeholder {
+  color: #bdbdbd;
+}
+.formWrap .myform .form-control .formText {
+  color: #204379;
+}
+.formWrap .myform .failBorder {
+  outline: 3px solid #e06d6d;
+}
+.formWrap .myform .inputWrap {
+  position: relative;
+}
+.formWrap .myform .inputWrap .errorMsg {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #e06d6d;
+}
+.formWrap .submitBtn {
+  width: 200px;
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #566bb5;
+  border-radius: 50px;
+  margin: 28px auto 8px;
+  border: none;
+}
+.formWrap .submitBtn span {
+  color: white;
+  font-weight: 700;
+  line-height: 125%;
+  font-size: 18px;
+  letter-spacing: 0.2rem;
+  font-style: normal;
+}
+.formWrap .submitBtn .submitBtnFont {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.formWrap .submitBtn .submitBtnFont img {
+  display: none;
+}
+.formWrap .notValad {
+  color: #e06d6d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 58px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

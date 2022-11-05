@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueForm_practice</title>
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- myStyle -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <img class="background" src="./img/bg.png" alt="">
+    <div id="formSubmit" class="formWrap">
+        <form name="myform" id="myform" class="g-3 myform" @submit.prevent="onSubmit()">
+
+            <div id="formAnchor" class="formTitle">
+                <span>表單</span>
+            </div>
+            <div class="col-12 inputWrap">
+                <label class="form-label">分店名稱<span style=" color:red">*</span></label>
+                <input id="store" class="form-control" :class="{failBorder: store.failBorder}" v-model="store.input"
+                    type="text" list="stores" placeholder="請輸入分店名稱" />
+                <datalist id="stores">
+                    <!-- storeList -->
+                </datalist>
+                <div class="errorMsg">
+                    {{store.errorMsg}}
+                </div>
+            </div>
+
+            <div class="col-12 inputWrap">
+                <label class="form-label">您的名稱<span style=" color:red">*</span></label>
+                <input id="name" type="text" class="form-control" :class="{failBorder: name.failBorder}"
+                    v-model="name.input" id="inputAddress2" placeholder="請輸入您的名稱">
+                <div class="errorMsg">
+                    {{name.errorMsg}}
+                </div>
+            </div>
+
+            <div class="col-12 inputWrap">
+                <label class="form-label">手機號碼<span style=" color:red">*</span></label>
+                <input id="phone" type="text" class="form-control" :class="{failBorder: phone.failBorder}"
+                    v-model="phone.input" id="inputAddress" placeholder="請輸入電話號碼(格式為10碼, 前兩位數為09)" inputmode="decimal">
+                <div class="errorMsg">
+                    {{phone.errorMsg}}
+                </div>
+            </div>
+
+            <div class="col-12 inputWrap">
+                <label class="form-label">消費金額<span style=" color:red">*</span></label>
+                <input id="consumption" type="text" class="form-control" :class="{failBorder: consumption.failBorder}"
+                v-model="consumption.input" placeholder="請輸入您的消費金額" inputmode="decimal">
+                <div class="errorMsg">
+                    {{consumption.errorMsg}}
+                </div>
+            </div>
+
+            <div class="col-12 inputWrap">
+                <label class="form-label">付款方式<span style=" color:red">*</span></label>
+                <select id="payment" class="form-control form-select form-select-lg"
+                    :class="{failBorder: payment.failBorder}" v-model="payment.input">
+                    <option class="formText" value="digital payment">線上付款</option>
+                    <option class="formText" value="ATM">銀行轉帳</option>
+                </select>
+                <div class="errorMsg">
+                    {{payment.errorMsg}}
+                </div>
+            </div>
+            <button class="submitBtn btnFocus" form="myform">
+                <span class="submitBtnFont">
+                    {{submitBtnStyle.text}}
+                </span>
+            </button>
+        </form>
+
+
+
+
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+    <!-- Bootstrap5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
+    <!-- my function -->
+    <script src="./function.js"></script>
+</body>
+
+</html>

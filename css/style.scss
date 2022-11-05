@@ -1,0 +1,152 @@
+// ****style var****
+
+// font
+$f_40px: 40px;
+$f_32px: 32px;
+$f_28px: 28px;
+$f_24px: 24px;
+$f_20px: 20px;
+$f_18px: 18px;
+$f_16px: 16px;
+$f_14px: 14px;
+$f_12px: 12px;
+
+$f_weight: 700;
+
+$f_family: "Noto Sans TC", sans-serif;
+
+//color
+$prime_color1: #204379;
+$prime_color2: #0059b1;
+$prime_color3: #dae4f1;
+$prime_color4: #e2d9d3;
+$prime_color5: #d3c3b8;
+$prime_color6: #b3b960;
+$prime_color7: #a0bcc8;
+
+$placeholder: #bdbdbd;
+
+
+// **** main style ****
+body {
+  .background{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+  }
+  * {
+    font-family: $f_family;
+  }
+}
+
+// ----form
+.formWrap {
+  padding: 120px 24px 0;
+  width: 100%;
+  max-width: 808px;
+  margin: auto;
+  .myform {
+    padding: 40px 20px 20px 20px;
+    background-color: rgba(255, 255, 255, 0.499);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0px 12px 18px rgba(73, 72, 72, 0.631);
+    .formTitle {
+      width: fit-content;
+      padding: 10px 20px;
+      background-color: #fff;
+      border: 2px solid $prime_color2;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-radius: 50px;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 1px 10px rgba(73, 72, 72, 0.25);
+      &::after {
+        content: "";
+        position: absolute;
+        width: 64px;
+        top: -10px;
+        right: -44px;
+        aspect-ratio: 64 / 62;
+      }
+      span {
+        color: $prime_color2;
+        font-weight: $f_weight;
+        line-height: 125%;
+        font-size: 18px;
+        letter-spacing: 0.2rem;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+
+    .form-control {
+      border: 1px solid $prime_color1;
+      padding: 17.5px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      font-size: $f_16px;
+      &::placeholder {
+        color: $placeholder;
+      }
+      .formText {
+        color: $prime_color1;
+      }
+    }
+    .failBorder {
+      outline: 3px solid #e06d6d;
+    }
+    .inputWrap {
+      position: relative;
+      .errorMsg {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: #e06d6d;
+      }
+    }
+  }
+  .submitBtn {
+    width: 200px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #566bb5;
+    border-radius: 50px;
+    margin: 28px auto 8px;
+    border: none;
+
+    span {
+      color: white;
+      font-weight: $f_weight;
+      line-height: 125%;
+      font-size: 18px;
+      letter-spacing: 0.2rem;
+      font-style: normal;
+    }
+    .submitBtnFont {
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      img {
+        display: none;
+      }
+    }
+  }
+  .notValad {
+    color: #e06d6d;
+    font-size: $f_14px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 58px;
+    text-align: center;
+  }
+}
